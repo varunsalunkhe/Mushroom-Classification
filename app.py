@@ -22,8 +22,14 @@ def predict():
 			json_ = request.json
 			querry=pd.get_dummies(pd.DataFrame(json_))
 			querry=querry.reindex(columns=model_cols , fill_value=0)
-			prediction=list(model.predict(querry))
-			return jsonify({"Prediction ": str(prediction)})
+			prediction= int(model.predict(querry))
+			# return jsonify({"Prediction ": prediction})
+			if prediction == 0:
+				return jsonify({"Prediction ": "Poisonous"})
+			else:
+				return jsonify({"Prediction ": "Non-Poisonous"})
+
+
 
 		except:
 			return jsonify({"trace ": traceback.format_exc()})
