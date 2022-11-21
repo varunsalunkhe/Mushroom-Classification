@@ -18,6 +18,8 @@ model.fit(x,y)
 import joblib
 joblib.dump(model, 'model.pkl')
 
+data_columns=x1.columns
+joblib.dump(data_columns, 'data_columns.pkl')
 
 data_cols=x.columns
 joblib.dump(data_cols, 'data_cols.pkl')
