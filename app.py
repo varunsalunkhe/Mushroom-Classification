@@ -20,8 +20,7 @@ def hello():
 	return render_template("home.html")
 
 @app.route("/api", methods=["GET","POST"])
-
-def predict():
+def predict_mush():
 	if model:
 		try:
 			json_ = request.json
@@ -43,10 +42,10 @@ def predict():
 		return ("no model is here to use")
 
 
-@app.route("/predict", methods=["GET","POST"])
-
-def mush():
+@app.route("/predict" , methods=["GET","POST"])
+def predict():
 	data= [str(i) for i in request.form.values()]
+	print(data)
 	input = pd.DataFrame(np.array(data).reshape(1,-1), columns=  data_columns)
 	final_input= pd.get_dummies(input)
 	final= final_input.reindex(columns=model_cols, fill_value=0)
