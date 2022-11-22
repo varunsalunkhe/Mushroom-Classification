@@ -5,10 +5,112 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mushroom</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@800&display=swap" rel="stylesheet">
+    <style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        
+
+
+    }
+        .head{
+            padding: 1px;
+            width: 100%;
+            height: 80px;
+            text-align: center;
+            background-color: rgb(32, 23, 23);
+            color: white;
+        }
+        h1{
+            margin-top: 10px;
+            font-family: 'Baloo Bhai 2', cursive;
+            font-size: 33px;
+            font-weight: lighter;
+            background-color:  rgb(32, 23, 23);
+        }
+        .form{
+            background-color: aliceblue;
+            width: 100%;
+            height: 600px;
+            background-image: url('https://images.unsplash.com/photo-1508505459706-81c1f1b3d467?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80');
+           
+            background-size: 100%;
+            /* filter: invert(10%); */
+            
+        }
+
+        form{
+           margin-left: 132px;
+           margin-right: 132px;
+        }
+
+        form>div{
+            width: 250px;
+            padding: 10px;
+            margin: 10px 20px 10px 20px;
+            font-family: 'Baloo Bhai 2', cursive;
+            color: rgb(250, 245, 245);
+            font-size: 18px;
+            display: inline-block;
+
+            
+        }
+
+        select{
+            font-family: 'Baloo Bhai 2', cursive;
+            border-radius: 5px;
+        }
+
+        button{
+            display: block;
+            margin: auto;
+            font-family: 'Baloo Bhai 2', cursive;
+             font-size: 20px;
+            width: 150px;
+            border: 2px solid rgb(245, 243, 243);
+            background-color: rgb(211, 40, 40);
+            color: black;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        /* .output{
+            text-align: center;
+            height: 40px;
+            width: 700px;
+            border-radius: 20px;
+            margin: auto;
+            margin-top: 50px;
+            background-color: rgb(250, 246, 246);
+            color: rgb(6, 0, 0);
+        } */
+
+        h2{
+            text-align: center;
+            height: 33px;
+            width: 700px;
+            border-radius: 15px;
+            padding-top: 7px;
+            margin: auto;
+            margin-top: 50px;
+            background-color: rgb(250, 246, 246);
+            color: rgb(6, 0, 0);
+
+        }
+
+
+    </style>
 </head>
 <body>
-    <div>
+    <div class="head">
+        <h1 >
+            CLASSIFICATION OF MUSHROOM
+        </h1>
+    </div>
+    <div class="form">
         <form action="{{ url_for('predict')}}" method="post">
+            <div>
             <label for="data1">Cap-shape</label>
                 <select name="Cap-shape" id="data1">
                     <!-- bell=b,conical=c,convex=x,flat=f, knobbed=k,sunken=s -->
@@ -20,8 +122,9 @@
                     <option value="s">sunken</option>
         
                 </select>
-            <br>
-            <br>
+            </div>
+            
+                <div>
             <label for="data2">Cap-surface</label>
                 <select name="Cap-surface" id="data2">
                     <!-- fibrous=f,grooves=g,scaly=y,smooth=s -->
@@ -32,9 +135,9 @@
                     <option value="s">smooth</option>
         
                 </select>
-                <br>
-                <br>
-        
+            </div>
+
+                <div>
             <label for="data3">Cap-color</label>
                 <select name="Cap-color" id="data3">
                     <!-- brown=n,buff=b,cinnamon=c,gray=g,green=r,pink=p,purple=u,red=e,white=w,yellow=y -->
@@ -51,9 +154,9 @@
                     <option value="y">yellow</option>
         
                 </select>
-        <br>
-        <br>
-        
+            </div>
+
+                <div>
             <label for="data4">Bruises</label>
                 <select name="Bruises" id="data4">
                     <!-- bruises=t,no=f -->
@@ -63,9 +166,9 @@
                     
         
                 </select>
-                <br>
-                <br>
-        
+            </div>
+
+                <div>
             <label for="data5">Odor</label>
                 <select name="Odor" id="data5">
                     <!-- almond=a,anise=l,creosote=c,fishy=y,foul=f,musty=m,none=n,pungent=p,spicy=s -->
@@ -82,10 +185,9 @@
                     
         
                 </select>
-        
-                <br>
-                <br>
-        
+            </div>
+               
+                <div>
             <label for="data6">Gill-attachment</label>
                 <select name="Gill-attachment" id="data6">
                     <!-- attached=a, descending=d, free=f, notched=n -->
@@ -95,11 +197,10 @@
                     <option value="n" >notched</option>
                     
                 </select>
+            </div>
+                
         
-                <br>
-                <br>
-        
-        
+                <div>
             <label for="data7">Gill-spacing</label>
                 <select name="Gill-spacing" id="data7">
                     <!-- close=c,crowded=w,distant=d -->
@@ -109,11 +210,10 @@
                     
                     
                 </select>
+            </div>
+                
         
-                <br>
-                <br>
-        
-        
+                <div>
             <label for="data8">Gill-size</label>
                 <select name="Gill-size" id="data8">
                     <!-- broad=b,narrow=n -->
@@ -123,9 +223,9 @@
                     
                     
                 </select>
-        
-                <br>
-                <br>
+            </div>
+
+                <div>  
         
             <label for="data9">Gill-color</label>
                 <select name="Gill-color" id="data9">
@@ -145,10 +245,9 @@
                     
                     
                 </select>
-        
-                <br>
-                <br>
-        
+            </div>
+               
+                <div>
                 <label for="data10">stalk-shape   </label>
                 <select name="stalk-shape  " id="data10">
                     
@@ -158,10 +257,9 @@
                     
                     
                 </select>
-        
-                <br>
-                <br>
-        
+            </div>
+                
+                <div>
                 <label for="data11">stalk-root        </label>
                 <select name="stalk-root        " id="data11">
                     
@@ -174,11 +272,10 @@
                     
                     
                 </select>
+            </div>
+             
         
-                <br>
-                <br>
-        
-        
+                <div>
                 <label for="data12">stalk-surface-above-ring        </label>
                 <select name="stalk-surface-above-ring        " id="data12">
                     
@@ -191,10 +288,9 @@
                     
                     
                 </select>
-        
-                <br>
-                <br>
-        
+            </div>
+             
+                <div>
                 <label for="data13">stalk-surface-below-ring        </label>
                 <select name="stalk-surface-below-ring " id="data13">
                     
@@ -206,11 +302,10 @@
                     
                     
                 </select>
+            </div>
+                
         
-                <br>
-                <br>
-        
-        
+                <div>
                 <label for="data14">stalk-color-above-ring </label>
                 <select name="stalk-color-above-ring " id="data14">
                     
@@ -223,10 +318,9 @@
                     
                     
                 </select>
-        
-                <br>
-                <br>
-        
+            </div>
+            
+                <div>
                 <label for="data15">stalk-color-below-ring </label>
                 <select name="stalk-color-below-ring " id="data15">
                     
@@ -239,10 +333,9 @@
                     
                     
                 </select>
-        
-                <br>
-                <br>
-        
+            </div>
+               
+                <div>
                 <label for="data16">veil-type   </label>
                 <select name="veil-type  " id="data16">
                   
@@ -250,11 +343,10 @@
                     
                     
                 </select>
+            </div>
+                
         
-                <br>
-                <br>
-        
-        
+                <div>
                 <label for="data17">veil-color </label>
                 <select name="veil-color " id="data17">
                     
@@ -267,11 +359,10 @@
                     
                     
                 </select>
+            </div>
+                
         
-                <br>
-                <br>
-        
-        
+                <div>
                 <label for="data18">ring-number
                 </label>
                 <select name="ring-number " id="data18">
@@ -285,11 +376,10 @@
                     
                     
                 </select>
+            </div>
         
-                <br>
-                <br>
-        
-        
+               
+                <div>
                 <label for="data19">ring-type
                 </label>
                 <select name="ring-type " id="data19">
@@ -302,10 +392,9 @@
                     <option value="n">n</option>
                     
                 </select>
+            </div>
         
-                <br>
-                <br>
-        
+                <div>
                 <label for="data20">spore-print-color
                 </label>
                 <select name="spore-print-color" id="data20">
@@ -318,11 +407,10 @@
                     <option value="r">r</option>
                     
                 </select>
+            </div>
+                
         
-                <br>
-                <br>
-        
-        
+                <div>
                 <label for="data21">population
                 </label>
                 <select name="population" id="data21">
@@ -335,11 +423,10 @@
                     <option value="a">a</option>
                     
                 </select>
+            </div>
+               
         
-                <br>
-                <br>
-        
-        
+                <div>
                 <label for="data22">habitat
                 </label>
                 <select name="habitat" id="data22">
@@ -353,14 +440,17 @@
                     <option value="u">u</option>
                     
                 </select>
+            </div>
         
-                <br>
-                <br>
-        
-                <button type="submit"> Predict</button>
                 
+        
+                <button type="submit"> PREDICT</button>
+               
         </form>
-    </div>
-    {{mushroom}}
+      
+    <h2>
+        {{mushroom}}
+    </h2>
+    
 </body>
 </html>
