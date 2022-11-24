@@ -40,18 +40,19 @@
         }
 
         form{
-           margin-left: 132px;
-           margin-right: 132px;
+           margin-left: 80px;
+           margin-right: 80px;
         }
 
         form>div{
-            width: 250px;
+            width: 290px;
             padding: 10px;
-            margin: 10px 20px 10px 20px;
+            margin: 10px 10px 10px 10px;
             font-family: 'Baloo Bhai 2', cursive;
             color: rgb(250, 245, 245);
             font-size: 18px;
             display: inline-block;
+            /* border: 2px solid white; */
 
             
         }
@@ -250,9 +251,9 @@
                 <label for="data10">stalk-shape   </label>
                 <select name="stalk-shape  " id="data10">
                     
-                    
-                    <option value="t">t</option>
-                    <option value="e" selected>e</option>
+                    <!-- stalk-shape: enlarging=e,tapering=t -->
+                    <option value="t">tapering</option>
+                    <option value="e" selected>enlarging</option>
                     
                     
                 </select>
@@ -262,12 +263,12 @@
                 <label for="data11">stalk-root        </label>
                 <select name="stalk-root        " id="data11">
                     
-                    
-                    <option value="b">b</option>
-                    <option value="?">?</option>
-                    <option value="e">e</option>
-                    <option value="c">c</option>
-                    <option value="r" selected>r</option>
+                    <!-- stalk-root: bulbous=b,club=c,cup=u,equal=e,rhizomorphs=z,rooted=r,missing=? -->
+                    <option value="b">bulbous</option>
+                    <option value="?">missing</option>
+                    <option value="e">equal</option>
+                    <option value="c">club</option>
+                    <option value="r" selected>rhizomorphs</option>
                     
                     
                 </select>
@@ -279,11 +280,11 @@
                 <select name="stalk-surface-above-ring        " id="data12">
                     
                     
-                    
-                    <option value="s">s</option>
-                    <option value="k">k</option>
-                    <option value="f">f</option>
-                    <option value="y" selected>y</option>
+                    <!-- stalk-surface-above-ring: fibrous=f,scaly=y,silky=k,smooth=s -->
+                    <option value="s">smooth</option>
+                    <option value="k">silky</option>
+                    <option value="f">fibrous</option>
+                    <option value="y" selected>scaly</option>
                     
                     
                 </select>
@@ -293,11 +294,11 @@
                 <label for="data13">stalk-surface-below-ring        </label>
                 <select name="stalk-surface-below-ring " id="data13">
                     
-                    
-                    <option value="s">s</option>
-                    <option value="k">k</option>
-                    <option value="f">f</option>
-                    <option value="y" selected>y</option>
+                    <!-- stalk-surface-below-ring: fibrous=f,scaly=y,silky=k,smooth=s -->
+                    <option value="s">smooth</option>
+                    <option value="k">silky</option>
+                    <option value="f">fibrous</option>
+                    <option value="y" selected>scaly</option>
                     
                     
                 </select>
@@ -308,12 +309,15 @@
                 <label for="data14">stalk-color-above-ring </label>
                 <select name="stalk-color-above-ring " id="data14">
                     
-                    
-                    <option value="w">w</option>
-                    <option value="p">p</option>
-                    <option value="g">g</option>
-                    <option value="n">n</option>
-                    <option value="b" selected>b</option>
+                    <!-- stalk-color-above-ring: brown=n,buff=b,cinnamon=c,gray=g,orange=o,pink=p,red=e,white=w,yellow=y -->
+                    <option value="w">white</option>
+                    <option value="y">yellow</option>
+                    <option value="e">red</option>
+                    <option value="p">pink</option>
+                    <option value="c">cinnamon</option>
+                    <option value="g">gray</option>
+                    <option value="n">brown</option>
+                    <option value="b" selected>buff</option>
                     
                     
                 </select>
@@ -324,11 +328,14 @@
                 <select name="stalk-color-below-ring " id="data15">
                     
                     
-                    <option value="w">w</option>
-                    <option value="p">p</option>
-                    <option value="g">g</option>
-                    <option value="n">n</option>
-                    <option value="b" selected>b</option>
+                    <option value="w">white</option>
+                    <option value="y">yellow</option>
+                    <option value="e">red</option>
+                    <option value="p">pink</option>
+                    <option value="c">cinnamon</option>
+                    <option value="g">gray</option>
+                    <option value="n">brown</option>
+                    <option value="b" selected>buff</option>
                     
                     
                 </select>
@@ -349,11 +356,11 @@
                 <label for="data17">veil-color </label>
                 <select name="veil-color " id="data17">
                     
-                    
-                    <option value="w" selected>w</option>
-                    <option value="o">o</option>
-                    <option value="y">y</option>
-                    <option value="n">n</option>
+                    <!-- veil-color: brown=n,orange=o,white=w,yellow=y -->
+                    <option value="w" selected>white</option>
+                    <option value="o">orange</option>
+                    <option value="y">yellow</option>
+                    <option value="n">brown</option>
                     
                     
                     
@@ -366,11 +373,11 @@
                 </label>
                 <select name="ring-number " id="data18">
                     
+                    <!-- ring-number: none=n,one=o,two=t -->
+                    <option value="t" selected>two</option>
+                    <option value="o">one</option>
                     
-                    <option value="t" selected>t</option>
-                    <option value="o">o</option>
-                    
-                    <option value="n">n</option>
+                    <option value="n">none</option>
                     
                     
                     
@@ -383,12 +390,15 @@
                 </label>
                 <select name="ring-type " id="data19">
                     
-                    
-                    <option value="p" selected>p</option>
-                    <option value="e">e</option>
-                    <option value="l">l</option>
-                    <option value="f">f</option>
-                    <option value="n">n</option>
+                    <!-- ring-type: cobwebby=c,evanescent=e,flaring=f,large=l,none=n,pendant=p,sheathing=s,zone=z -->
+                    <option value="p" selected>pendant</option>
+                    <option value="e">evanescent</option>
+                    <option value="l">large</option>
+                    <option value="f">flaring</option>
+                    <option value="n">none</option>
+                    <option value="c">cobwebby</option>
+                    <option value="z">zone</option>
+                    <option value="s">sheathing</option>
                     
                 </select>
             </div>
@@ -398,12 +408,16 @@
                 </label>
                 <select name="spore-print-color" id="data20">
                     
-                    
-                    <option value="w" selected>w</option>
-                    <option value="n">n</option>
-                    <option value="k">k</option>
-                    <option value="h">h</option>
-                    <option value="r">r</option>
+                    <!-- spore-print-color: black=k,brown=n,buff=b,chocolate=h,green=r,orange=o,purple=u,white=w,yellow=y -->
+                    <option value="w" selected>white</option>
+                    <option value="n">brown</option>
+                    <option value="k">black</option>
+                    <option value="h">chocolate</option>
+                    <option value="r">green</option>
+                    <option value="y">yellow</option>
+                    <option value="u">purple</option>
+                    <option value="b">buff</option>
+                    <option value="o">orange</option>
                     
                 </select>
             </div>
@@ -414,12 +428,13 @@
                 </label>
                 <select name="population" id="data21">
                     
-                    
-                    <option value="v" selected>v</option>
-                    <option value="n">n</option>
-                    <option value="y">y</option>
-                    <option value="s">s</option>
-                    <option value="a">a</option>
+                    <!-- population: abundant=a,clustered=c,numerous=n,scattered=s,several=v,solitary=y -->
+                    <option value="v" selected>several</option>
+                    <option value="n">numerous</option>
+                    <option value="y">solitary</option>
+                    <option value="s">scattered</option>
+                    <option value="c">clustered</option>
+                    <option value="a">abundant</option>
                     
                 </select>
             </div>
@@ -430,13 +445,15 @@
                 </label>
                 <select name="habitat" id="data22">
                     
+                    <!-- habitat: grasses=g,leaves=l,meadows=m,paths=p,urban=u,waste=w,woods=d -->
+                    <option value="d" selected>woods</option>
+                    <option value="g">grasses</option>
+                    <option value="m">meadows</option>
+                    <option value="w">waste</option>
                     
-                    <option value="d" selected>d</option>
-                    <option value="g">g</option>
-                    
-                    <option value="p">p</option>
-                    <option value="l">l</option>
-                    <option value="u">u</option>
+                    <option value="p">paths</option>
+                    <option value="l">leaves</option>
+                    <option value="u">urban</option>
                     
                 </select>
             </div>
