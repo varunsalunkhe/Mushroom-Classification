@@ -70,8 +70,8 @@ import joblib
 
 app = Flask(__name__)
 app.secret_key = "testing"
-client = pymongo.MongoClient('localhost', 27017)
-db = client.get_database('total_records')
+client = pymongo.MongoClient("mongodb+srv://sourabh108:Pass123@cluster0.bp2fo.mongodb.net/?retryWrites=true&w=majority")
+db = client.get_database('Mushroom')
 records = db.register
 
 
@@ -96,33 +96,7 @@ def dashboard():
     else:
         return render_template("login.html")
 
-# @app.route("/login",methods=["POST", "GET"])
-# def login():
-#     message = 'Please login to your account'
-#     if "email" in session:
-#         return redirect(url_for('dashboard'))
 
-#     if request.method == "POST":
-#         email = request.form.get("email")
-#         password = request.form.get("password")
-
-#         email_found = records.find_one({"email": email})
-#         if email_found:
-#             email_val = email_found['email']
-#             passwordcheck = email_found['password']
-            
-#             if bcrypt.checkpw(password.encode('utf-8'), passwordcheck):
-#                 session["email"] = email_val
-#                 return redirect(url_for('dashboard'))
-#             else:
-#                 if "email" in session:
-#                     return redirect(url_for("dashboard"))
-#                 message = 'Wrong password'
-#                 return render_template('login.html', message=message)
-#         else:
-#             message = 'Email not found'
-#             return render_template('login.html', message=message)
-#     return render_template("login.html")
 @app.route("/login", methods=["POST", "GET"])
 def login():
     message = 'Please login to your account'
@@ -190,18 +164,23 @@ def signin():
             return render_template('dashboard.html',email = new_email)    
     return render_template("signin.html")
 
-@app.route("/predict" , methods=["GET","POST"])
+@app.route("/dashboard" , methods=["GET","POST"])
 def predict():
-	data= [str(i) for i in request.form.values()]
-	print(data)
-	input = pd.DataFrame(np.array(data).reshape(1,-1), columns=  data_columns)
-	final_input= pd.get_dummies(input)
-	final= final_input.reindex(columns=model_cols, fill_value=0)
-	output = model.predict(final)[0]
-	if output == 0:
-		return render_template('dashboard.html', mushroom ="The mushroom is Poisonous.")
-	else:
-		return render_template('dashboard.html', mushroom ="The mushroom is Edible.")
+    if "email" in session:
+        email = session["email"]
+        data= [str(i) for i in request.form.values()]
+        print(data)
+        input = pd.DataFrame(np.array(data).reshape(1,-1), columns=  data_columns)
+        final_input= pd.get_dummies(input)
+        final= final_input.reindex(columns=model_cols, fill_value=0)
+        output = model.predict(final)[0]
+        if output == 0:
+            return render_template('dashboard.html', mushroom ="The mushroom is Poisonous.",email = email)
+        else:
+            return render_template('dashboard.html', mushroom ="The mushroom is Edible.",email = email)
+    else:
+        return render_template("login.html")
+
 
 
 @app.route("/logout", methods=["POST", "GET"])
