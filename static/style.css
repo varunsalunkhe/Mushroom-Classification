@@ -1,0 +1,11 @@
+body{
+    font-family: 'Oswald', sans-serif;
+}
+.headline{
+    text-decoration: underline;
+    color: #495057;
+}
+.answer{
+    font-family: 'Inter', sans-serif;
+    color: #b197fc;
+}
