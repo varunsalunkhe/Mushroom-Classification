@@ -25,75 +25,30 @@ Recongnizing whether mushroom is poisonous or not.
 - [kaggle link](https://www.kaggle.com/datasets/uciml/mushroom-classification)
 - [Repo link](https://github.com/varunsalunkhe/Project--Mushroom/blob/master/mushrooms.csv)
 
-## 🏽‍ Download Object Detection Model
-- Download the object detection model manually : **yolov3-spp.weights** file from following Drive Link
-- https://drive.google.com/file/d/1h2g_wQ270_pckpRCHJb9K78uDf-2PsPd/view?usp=sharing
-- Download the weight file and Place it into **" detector/yolo/data/ "** folder.
-
-##  🏽‍ For Pose Tracking, Download the object tracking model
-- For pose tracking, download the object tracking model manually: **" JDE-1088x608-uncertainty "** from following Drive Link 
-- https://drive.google.com/file/d/1oeK1aj9t7pTi1u70nSIwx0qNVWvEvRrf/view?usp=sharing
-- Download the file and Place it into **" detector/tracker/data/ ".** folder.
-
-## 🏽‍ Download Fast.res50.pt file
-- Download the **" fast.res50.pth "** file from following Drive Link 
-- https://drive.google.com/file/d/1WrvycZnVWwltSa6cjeTznEFOyNAwHEZu/view?usp=sharing
-- Download the file and Place it into **" pretrained_models/ ".** folder.
-
 ## :desktop_computer:	Installation
 
 ### :hammer_and_wrench: Requirements
 * Python 3.5+
-* Cython
-* PyTorch 1.1+
-* torchvision 0.3.0+
-* Linux
-* GCC<6.0, check https://github.com/facebookresearch/maskrcnn-benchmark/issues/25
+* numpy
+* panda
+* sklearn
+* flask
+* pymongo
+* bcrypt
+* joblib
 
 ## :gear: Setup
-1. Install PyTorch :-
+1. Install Python:-
+  Download from [here](https://www.python.org/)
+2. Install required modules:-
 ```bash
-$ pip3 install torch==1.1.0 torchvision==0.3.0
+$ pip install -r requirements.txt
 
 ```
-2. Install :-
-```bash
-$ export PATH=/usr/local/cuda/bin/:$PATH
 
-```
+## 👨‍💻 To run
 ```bash
-$ export LD_LIBRARY_PATH=/usr/local/cuda/lib64/:$LD_LIBRARY_PATH
-
-```
-```bash
-$ pip install cython
-
-```
-```bash
-$ sudo apt-get install libyaml-dev
-
-```
-```bash
-$ python setup.py build develop --user
-
-```
-```bash
-$ python -m pip install Pillow==6.2.1
-
-```
-```bash
-$ pip install -U PyYAML
-
-```
-## 🎯 Inference demo
-1. Testing with **Images** ( Put test images in **AlphaPose/examples/demo/** )  :-
-```bash
-$ python scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/fast_res50_256x192.pth --indir examples/demo/ --save_img
-
-```
-2. Testing with **Video** ( Put test video in **AlphaPose/examples/demo/** )  :-
-```bash
-$ python scripts/demo_inference.py --cfg configs/coco/resnet/256x192_res50_lr1e-3_1x.yaml --checkpoint pretrained_models/fast_res50_256x192.pth --video examples/demo/3.mp4 --outdir examples/res1 --save_video --gpus 0
+$ python app.py
 
 ```
 
