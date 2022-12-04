@@ -1,17 +1,20 @@
 ### Project--Mushroom
-Recongnizing that the mushroom is weather poisonous or not.
+Recongnizing whether mushroom is poisonous or not.
 
-### Project--Mushroom
-Recongnizing that the mushroom is weather poisonous or not.
-## :running: :walking: :dancer: Pose-With-Action
-![pose_with_action](https://user-images.githubusercontent.com/62059604/99776776-5db0de00-2b37-11eb-97e7-b39f53f2d703.gif)
+## :technologist: :student:  User Interface
+<br />
 
-![Untitled design (4)](https://user-images.githubusercontent.com/62059604/99800421-5818bf80-2b5a-11eb-83ad-c0fe6a2d48be.png)
+>Home page
+![Home Page](https://github.com/varunsalunkhe/Project--Mushroom/blob/6fbebefa3f99c69270ee0ae33fa8dc45d2fd9a47/Screenshots/HomePage.png)
+>Login Page
+![Login Page](https://github.com/varunsalunkhe/Project--Mushroom/blob/6fbebefa3f99c69270ee0ae33fa8dc45d2fd9a47/Screenshots/Login%20page.png)
+>Signup Page
+![Signup Page](https://github.com/varunsalunkhe/Project--Mushroom/blob/6fbebefa3f99c69270ee0ae33fa8dc45d2fd9a47/Screenshots/Signup%20Page.png)
+>Prediction Page
+![Prediction Page](https://github.com/varunsalunkhe/Project--Mushroom/blob/6fbebefa3f99c69270ee0ae33fa8dc45d2fd9a47/Screenshots/Prediction%20Model%20page.png)
 
-![Untitled design (5)](https://user-images.githubusercontent.com/62059604/99800592-9e6e1e80-2b5a-11eb-8f70-4796dd0ee36a.png)
-
-- This repository represents **" Action Recognition Using Alphapose "**.
-- With the help of this project we can detect the human Actions/Activities based on the **Human Pose**.
+- This repository represents **" Mushroom Classification "**.
+- With the help of this project we can detect whether mushroom with provided specifications is **Poisonous** or not.
   
 ## 📝 Description
 - This implemantation is based on official **Alphapose** repository https://github.com/MVIG-SJTU/AlphaPose 
