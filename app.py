@@ -160,7 +160,9 @@ def signin():
             
             user_data = records.find_one({"email": email})
             new_email = user_data['email']
-
+            session["email"] = new_email
+            if "email" in session:
+                    return redirect(url_for("dashboard"))
             return render_template('dashboard.html',email = new_email)    
     return render_template("signin.html")
 
