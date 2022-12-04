@@ -18,11 +18,12 @@ Recongnizing whether mushroom is poisonous or not.
   
 ## 📝 Description
 - This implemantation is based on official **Alphapose** repository https://github.com/MVIG-SJTU/AlphaPose 
-- In this project we have used **Alphapose** and **XGBOOST** for activity recognition.
+- In this project we have used **RandomForestClassifier** for classification of mushrooms.
 
 ## ⏳ Dataset
 - Download the dataset for custom training
-- https://drive.google.com/drive/folders/1CFxvuigTzbnRXUojFeCRozxjUbYiQ8RM?usp=sharing 
+- [kaggle link](https://www.kaggle.com/datasets/uciml/mushroom-classification)
+- [Repo link](https://github.com/varunsalunkhe/Project--Mushroom/blob/master/mushrooms.csv)
 
 ## 🏽‍ Download Object Detection Model
 - Download the object detection model manually : **yolov3-spp.weights** file from following Drive Link
