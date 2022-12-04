@@ -10,8 +10,10 @@ Recongnizing whether mushroom is poisonous or not.
 ![Login Page](https://github.com/varunsalunkhe/Project--Mushroom/blob/6fbebefa3f99c69270ee0ae33fa8dc45d2fd9a47/Screenshots/Login%20page.png)
 >Signup Page
 ![Signup Page](https://github.com/varunsalunkhe/Project--Mushroom/blob/6fbebefa3f99c69270ee0ae33fa8dc45d2fd9a47/Screenshots/Signup%20Page.png)
+>Attributes input Page
+![input Page](https://github.com/varunsalunkhe/Project--Mushroom/blob/6fbebefa3f99c69270ee0ae33fa8dc45d2fd9a47/Screenshots/Prediction%20Model%20page.png)
 >Prediction Page
-![Prediction Page](https://github.com/varunsalunkhe/Project--Mushroom/blob/6fbebefa3f99c69270ee0ae33fa8dc45d2fd9a47/Screenshots/Prediction%20Model%20page.png)
+![Prediction Page](https://github.com/varunsalunkhe/Project--Mushroom/blob/db093845ef9fc2057a234b083fd89f9585e2f86e/Screenshots/Predicted%20page.png)
 
 - This repository represents **" Mushroom Classification "**.
 - With the help of this project we can detect whether mushroom with provided specifications is **Poisonous** or not.
@@ -53,10 +55,10 @@ $ python app.py
 ```
 
 
-### :book: Please Go through [Pose_With_Action_HLD2.docx](https://github.com/iNeuron-ai/Pose-with-Action/blob/main/doc/Pose_With_Action_HLD2.docx) for more info.
+<!-- ### :book: Please Go through [Pose_With_Action_HLD2.docx](https://github.com/iNeuron-ai/Pose-with-Action/blob/main/doc/Pose_With_Action_HLD2.docx) for more info.
+ -->
 
-
-## Contributors <img src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/Developer.gif" width=35 height=25> 
+<!-- ## Contributors <img src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/Developer.gif" width=35 height=25> 
 - Akshay Kumar Prasad	
 - Akshay Namdev Kadam	
 - Arjun K	
@@ -72,3 +74,4 @@ $ python app.py
 - Sameer sudhir Deshmukh	
 - Sasidharan M	
 - shrinivas kandlikar
+ -->
