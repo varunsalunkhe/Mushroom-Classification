@@ -1,35 +1,60 @@
-{% extends "layout.html" %}
-
-{% block title %}Login{% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% block title %}Login{% endblock %} {% block
+content %}
 
 <h1 class="text-center">Signin</h1>
-{% if message  %}
-    <div class="alert alert-secondary" role="alert">
-        <p>{{ message }}</p>
-    </div>
+{% if message %}
+<div class="alert alert-secondary" role="alert">
+  <p>{{ message }}</p>
+</div>
 {% endif %}
 <form action="" method="post">
-    <div class="mb-3">
-        <label for="Fullname" class="form-label">Full name</label>
-        <input type="text" name="fullname" class="form-control" id="inputFullName" aria-describedby="emailHelp">
-        <small id="fullName" class="form-text text-muted">Please enter your full name(First name and Last name)</small>
-    </div>
-    <div class="mb-3">
-        <label for="InputEmail" class="form-label">Email address</label>
-        <input  type="email" name="email" class="form-control" id="InputEmail" aria-describedby="emailHelp">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-    <div class="mb-3">
-        <label for="InputPassword" class="form-label">Password</label>
-        <input type="password" name="password1" class="form-control" id="InputPassword">
-    </div>
-    <div class="mb-3">
-        <label for="InputPassword2" class="form-label">Repeat Password</label>
-        <input type="password" name="password2" class="form-control" id="InputPassword2">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+  <div class="mb-3">
+    <label for="Fullname" class="form-label">Full name</label>
+    <input
+      type="text"
+      name="fullname"
+      class="form-control"
+      id="inputFullName"
+      aria-describedby="emailHelp"
+    />
+    <small id="fullName" class="form-text text-muted"
+      >Please enter your full name(First name and Last name)</small
+    >
+  </div>
+  <div class="mb-3">
+    <label for="InputEmail" class="form-label">Email address</label>
+    <input
+      type="email"
+      name="email"
+      class="form-control"
+      id="InputEmail"
+      aria-describedby="emailHelp"
+    />
+    <small id="emailHelp" class="form-text text-muted"
+      >We'll never share your email with anyone else.</small
+    >
+  </div>
+  <div class="mb-3">
+    <label for="InputPassword" class="form-label">Password</label>
+    <input
+      type="password"
+      name="password1"
+      class="form-control"
+      id="InputPassword"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="Inputrecheck_password" class="form-label"
+      >Repeat Password</label
+    >
+    <input
+      type="password"
+      name="recheck_password"
+      class="form-control"
+      id="Inputrecheck_password"
+    />
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
 </form>
 
 {% endblock %}
