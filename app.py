@@ -18,7 +18,12 @@ app = Flask(__name__)
 app.secret_key = "testing"
 
 try:
-    Userkey="sourabh108:Pass123" 
+
+    file1 = open("Userinfo.txt","r")
+    userinfolist=file1.readlines()
+    Userkey=""+userinfolist[0][9:-1]+":"+userinfolist[1][9:-1]
+    print(Userkey)
+    file1.close()
     mongodbcompassURlconnection="mongodb+srv://"+Userkey+"@cluster0.bp2fo.mongodb.net/?retryWrites=true&w=majority"
     client = pymongo.MongoClient(mongodbcompassURlconnection)
 except Exception as error:
