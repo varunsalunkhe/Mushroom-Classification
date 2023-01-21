@@ -47,7 +47,7 @@ be" for Poisonous Oak and Ivy.
 ### :hammer_and_wrench: Requirements
 * Python 3.5+
 * numpy
-* panda
+* pandas
 * sklearn
 * flask
 * pymongo
