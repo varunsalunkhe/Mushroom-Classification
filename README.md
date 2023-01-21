@@ -72,24 +72,3 @@ $ python app.py
 
 ```
 
-
-<!-- ### :book: Please Go through [Pose_With_Action_HLD2.docx](https://github.com/iNeuron-ai/Pose-with-Action/blob/main/doc/Pose_With_Action_HLD2.docx) for more info.
- -->
-
-<!-- ## Contributors <img src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/Developer.gif" width=35 height=25> 
-- Akshay Kumar Prasad	
-- Akshay Namdev Kadam	
-- Arjun K	
-- ATUL KUMAR	
-- Deepak Kumar Behera	
-- Jerryl Davis	
-- Kancharla Bharath Kumar	
-- Karthik P	
-- Madhavi Patel	
-- Mukesh	
-- Oinam Bhobendra	
-- pamita singh kandari	
-- Sameer sudhir Deshmukh	
-- Sasidharan M	
-- shrinivas kandlikar
- -->
